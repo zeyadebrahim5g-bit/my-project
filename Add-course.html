@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course - Course Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Course Organizer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">My Courses</a></li>
+                <li><a href="add-course.html">Add Course</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Add a New Course</h2>
+        <p>Please fill out the form below to add a new course to your list:</p>
+
+        <form>
+            <label for="cname">Course Name:</label><br>
+            <input type="text" id="cname" name="course_name" placeholder="e.g. JavaScript" required><br><br>
+
+            <label for="instructor">Instructor Name:</label><br>
+            <input type="text" id="instructor" name="instructor_name" required><br><br>
+
+            <label for="hours">Duration (Hours):</label><br>
+            <input type="number" id="hours" name="duration" min="1" max="100"><br><br>
+
+            <label for="level">Course Level:</label><br>
+            <select id="level" name="course_level">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select><br><br>
+
+            <button type="submit">Add Course</button>
+            <button type="reset">Clear Form</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>All Rights Reserved &copy; 2026 - Designed by [Your Name]</p>
+    </footer>
+
+</body>
+</html>
