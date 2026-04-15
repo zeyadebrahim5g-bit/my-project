@@ -1,117 +1,86 @@
-/* تنسيق عام للموقع */
+/* 1. التنسيقات العامة */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
-    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
-/* تنسيق الهيدر والمنيو */
+/* 2. الهيدر والمنيو - ظبطناها عشان الموبايل */
 header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px 0;
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 10px 0 0 0;
+    gap: 10px; /* مسافة بين اللينكات */
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap; /* بيمنع الكلمات تنزل تحت بعضها */
+    padding: 5px 8px;
 }
 
-nav ul li a:hover {
-    color: #3498db;
-    text-decoration: underline;
-}
-
-/* تنسيق المحتوى الرئيسي */
+/* 3. المحتوى الرئيسي */
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
 }
 
-/* تنسيق الجداول */
-table {
+/* 4. الجدول والعلبة المحيطة به (السر في الموبايل) */
+.container {
     width: 100%;
-    border-collapse: collapse;
+    overflow-x: auto; /* بيشغل السحب يمين وشمال */
+    display: block;
+    -webkit-overflow-scrolling: touch;
     margin-top: 20px;
 }
 
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
+table {
+    width: 100%;
+    min-width: 600px; /* بيجبر الجدول يحافظ على شكله في الموبايل */
+    border-collapse: collapse;
 }
 
-table th {
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
     background-color: #3498db;
     color: white;
 }
 
-/* تنسيق الفورم (النماذج) */
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* عشان الـ padding ميبوظش المقاس */
-}
-
-button {
-    background-color: #2ecc71;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #27ae60;
-}
-
-/* الفوتر */
+/* 5. الفوتر */
 footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9em;
     color: #777;
 }
-/* الكود النهائي لتظبيط الموبايل */
-.container {
-    width: 100%;
-    overflow-x: auto; /* بيسمح بالسحب يمين وشمال */
-    display: block;
-    padding: 5px;
-    box-sizing: border-box;
-}
 
-table {
-    width: 100%;
-    min-width: 600px; /* بيجبر الجدول يحافظ على هيبته ومينضغطش */
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+/* 6. تعديلات بسيطة جداً للموبايل الصغير */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 5px;
+    }
+    nav ul li a {
+        font-size: 12px;
+        padding: 5px 2px;
+    }
 }
