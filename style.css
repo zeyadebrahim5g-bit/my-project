@@ -95,16 +95,23 @@ footer {
     font-size: 0.9em;
     color: #777;
 }
-/* كود لتظبيط الجدول على الموبايل */
+/* الكود النهائي لتظبيط الموبايل */
 .container {
-    width: 100%; /* غيرها من 95 لـ 100 */
-    margin: auto;
-    overflow-x: auto; 
-    display: block; /* ضيف السطر ده ضروري */
+    width: 100%;
+    overflow-x: auto; /* بيسمح بالسحب يمين وشمال */
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 table {
     width: 100%;
-    min-width: 600px; /* بيحافظ على شكل الجدول عشان الكلام ميدخلش في بعضه */
+    min-width: 600px; /* بيجبر الجدول يحافظ على هيبته ومينضغطش */
     border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
 }
