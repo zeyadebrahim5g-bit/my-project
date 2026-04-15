@@ -21,7 +21,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 10px 0 0 0;
-    gap: 10px; /* مسافة بين اللينكات */
+    gap: 8px; /* مسافة بين اللينكات */
 }
 
 nav ul li a {
