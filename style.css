@@ -95,3 +95,15 @@ footer {
     font-size: 0.9em;
     color: #777;
 }
+/* كود لتظبيط الجدول على الموبايل */
+.container {
+    width: 95%; /* بيخلي المحتوى مياخدش الشاشة كلها ويسيب فراغ بسيط */
+    margin: auto;
+    overflow-x: auto; /* أهم سطر: بيعمل سحب يمين وشمال لو الجدول عريض */
+}
+
+table {
+    width: 100%;
+    min-width: 600px; /* بيحافظ على شكل الجدول عشان الكلام ميدخلش في بعضه */
+    border-collapse: collapse;
+}
